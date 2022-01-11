@@ -344,6 +344,56 @@ html {
 .blog_container {
 	padding-top: 6rem;
 
+	.swiper_container {
+		position: relative;
+
+		&::before {
+			content: "";
+			height: 100%;
+			width: 1000%;
+			position: absolute;
+			z-index: 1111;
+			background-color: white;
+			top: 0%;
+			left: -1000%;
+		}
+	}
+
+	.swiper-container {
+		overflow: initial;
+	}
+
+	.arrow_btns {
+		[type="button"]:not(:disabled),
+		[type="reset"]:not(:disabled),
+		[type="submit"]:not(:disabled),
+		button:not(:disabled) {
+			background: #000 !important;
+			color: #fff !important;
+		}
+	}
+
+	.mySwiper {
+		.slider_ {
+			.position-absolute {
+				position: absolute;
+				bottom: 2rem;
+				left: 0;
+
+				button {
+					border: none;
+					border-radius: 50%;
+					height: 40px;
+					width: 40px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background-color: #fff;
+				}
+			}
+		}
+	}
+
 	.arrow_btns {
 		button {
 			height: 40px;
@@ -476,6 +526,50 @@ html {
 // VIDEOS START
 .videos_container {
 	padding-top: 3rem;
+
+	.swiper-container {
+		overflow: initial;
+	}
+
+	.recent_videos {
+		z-index: 168;
+		background: white;
+		position: relative;
+
+		&::before {
+			content: "";
+			height: 100%;
+			width: 1000%;
+			position: absolute;
+			z-index: 1;
+			background-color: white;
+			top: 0%;
+			left: -1000%;
+		}
+	}
+
+	.arrow_btns {
+		[type="button"]:not(:disabled),
+		[type="reset"]:not(:disabled),
+		[type="submit"]:not(:disabled),
+		button:not(:disabled) {
+			background: #000 !important;
+			color: #fff !important;
+		}
+	}
+
+	.arrow_btns {
+		button {
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 2px solid #000;
+			background: transparent;
+		}
+	}
 }
 // VIDEOS END
 
@@ -654,6 +748,32 @@ html {
 			width: 100%;
 		}
 	}
+
+	.videos_container {
+		padding-top: 3rem;
+
+		.swiper-container {
+			overflow: hidden;
+		}
+
+		.recent_videos {
+			z-index: 168;
+			background: white;
+			position: relative;
+
+			&::before {
+				content: "";
+				display: none;
+				height: 0%;
+				width: 0%;
+				position: absolute;
+				z-index: 1;
+				background-color: white;
+				top: 0%;
+				left: 0%;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -768,6 +888,29 @@ html {
 	.embed_calender_container {
 		margin-bottom: 24rem;
 	}
+
+	// BLOGS START
+	.blog_container {
+		.swiper-container {
+			overflow: hidden;
+		}
+
+		.swiper_container {
+			position: relative;
+
+			&::before {
+				content: "";
+				height: 0%;
+				width: 0%;
+				position: absolute;
+				z-index: 1111;
+				background-color: white;
+				top: 0%;
+				left: 0%;
+			}
+		}
+	}
+	// BLOGS END
 }
 
 @media screen and (max-width: 575px) {

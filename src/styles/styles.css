@@ -342,6 +342,56 @@ html {
   padding-top: 6rem;
 }
 
+.blog_container .swiper_container {
+  position: relative;
+}
+
+.blog_container .swiper_container::before {
+  content: "";
+  height: 100%;
+  width: 1000%;
+  position: absolute;
+  z-index: 1111;
+  background-color: white;
+  top: 0%;
+  left: -1000%;
+}
+
+.blog_container .swiper-container {
+  overflow: initial;
+}
+
+.blog_container .arrow_btns [type="button"]:not(:disabled),
+.blog_container .arrow_btns [type="reset"]:not(:disabled),
+.blog_container .arrow_btns [type="submit"]:not(:disabled),
+.blog_container .arrow_btns button:not(:disabled) {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.blog_container .mySwiper .slider_ .position-absolute {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+}
+
+.blog_container .mySwiper .slider_ .position-absolute button {
+  border: none;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+}
+
 .blog_container .arrow_btns button {
   height: 40px;
   width: 40px;
@@ -472,6 +522,52 @@ html {
 
 .videos_container {
   padding-top: 3rem;
+}
+
+.videos_container .swiper-container {
+  overflow: initial;
+}
+
+.videos_container .recent_videos {
+  z-index: 168;
+  background: white;
+  position: relative;
+}
+
+.videos_container .recent_videos::before {
+  content: "";
+  height: 100%;
+  width: 1000%;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  top: 0%;
+  left: -1000%;
+}
+
+.videos_container .arrow_btns [type="button"]:not(:disabled),
+.videos_container .arrow_btns [type="reset"]:not(:disabled),
+.videos_container .arrow_btns [type="submit"]:not(:disabled),
+.videos_container .arrow_btns button:not(:disabled) {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.videos_container .arrow_btns button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #000;
+  background: transparent;
 }
 
 .projects_container {
@@ -652,6 +748,28 @@ html {
   .hero_container img.hero_img {
     width: 100%;
   }
+  .videos_container {
+    padding-top: 3rem;
+  }
+  .videos_container .swiper-container {
+    overflow: hidden;
+  }
+  .videos_container .recent_videos {
+    z-index: 168;
+    background: white;
+    position: relative;
+  }
+  .videos_container .recent_videos::before {
+    content: "";
+    display: none;
+    height: 0%;
+    width: 0%;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    top: 0%;
+    left: 0%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -776,6 +894,22 @@ html {
   }
   .embed_calender_container {
     margin-bottom: 24rem;
+  }
+  .blog_container .swiper-container {
+    overflow: hidden;
+  }
+  .blog_container .swiper_container {
+    position: relative;
+  }
+  .blog_container .swiper_container::before {
+    content: "";
+    height: 0%;
+    width: 0%;
+    position: absolute;
+    z-index: 1111;
+    background-color: white;
+    top: 0%;
+    left: 0%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

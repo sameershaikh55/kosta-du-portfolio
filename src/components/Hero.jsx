@@ -22,13 +22,19 @@ const Hero = () => {
 										<div className="line_ mx-4"></div>
 										<ul className="list-unstyled d-flex align-items-center mb-0">
 											<li>
-												<img src={youtube} alt="" />
+												<a href="">
+													<img src={youtube} alt="" />
+												</a>
 											</li>
 											<li className="mx-3">
-												<img src={linkdin} alt="" />
+												<a href="">
+													<img src={linkdin} alt="" />
+												</a>
 											</li>
 											<li>
-												<img src={telegram} alt="" />
+												<a href="">
+													<img src={telegram} alt="" />
+												</a>
 											</li>
 										</ul>
 									</div>
