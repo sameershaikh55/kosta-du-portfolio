@@ -1,5 +1,5 @@
 // This is a React Router v6 app
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 // CSS
 import "./styles/styles.css";
@@ -11,20 +11,20 @@ import Contact from "./pages/Contact";
 import Press from "./pages/Press";
 import Videos from "./pages/Videos";
 import Projects from "./pages/Projects";
-// import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
 	return (
-		<BrowserRouter>
-			{/* <ScrollToTop /> */}
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/contact" element={<Contact />} />
-				<Route path="/press" element={<Press />} />
-				<Route path="/videos" element={<Videos />} />
-				<Route path="/projects" element={<Projects />} />
-			</Routes>
-		</BrowserRouter>
+		<>
+			<ScrollToTop />
+			<Switch>
+				<Route exact path="/" component={Home} />
+				<Route exact path="/contact" component={Contact} />
+				<Route exact path="/press" component={Press} />
+				<Route exact path="/videos" component={Videos} />
+				<Route exact path="/projects" component={Projects} />
+			</Switch>
+		</>
 	);
 }
 
