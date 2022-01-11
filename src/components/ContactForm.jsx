@@ -13,12 +13,13 @@ const ContactForm = () => {
 					<div className="row">
 						<div className="col-11 col-md-12 mx-auto">
 							<h1 className="f58 fw900 color2">
-								Turn <span className="color3">ideas</span> <br /> into
-								established <br /> business
+								Turn <span className="color3">ideas</span>{" "}
+								<br className="d-none d-md-block" /> into established <br />{" "}
+								business
 							</h1>
 
-							<div className="row form_container">
-								<div className="col-6">
+							<div className="row gy-5 mt-0 form_container">
+								<div className="col-12 col-md-6 order-1 order-md-0">
 									<div className="row">
 										<div className="d-flex align-items-start">
 											<img src={location} alt="" />
@@ -40,7 +41,7 @@ const ContactForm = () => {
 										</div>
 									</div>
 								</div>
-								<div className="col-6">
+								<div className="col-12 col-md-6">
 									<form
 										action="
                   "

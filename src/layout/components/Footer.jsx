@@ -21,17 +21,27 @@ const Footer = () => {
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-11 col-md-12 mx-auto">
-							<div className="d-flex justify-content-between align-items-center">
+							<div className="d-flex flex-column flex-md-row justify-content-lg-between align-items-lg-center">
 								<div className="logo_container">
 									<Link to="/">
 										<img src={logo} alt="" />
 									</Link>
 								</div>
 
-								<ul className="list-unstyled d-flex align-items-center mb-0">
+								<ul className="my-5 my-md-0 list-unstyled d-none d-lg-flex align-items-center">
 									{navigations.map((item, i) => {
 										return (
 											<li className="mx-4 text-white f18 pointer" key={i}>
+												{item.link}
+											</li>
+										);
+									})}
+								</ul>
+
+								<ul className="mt-3 mb-5 my-md-0 list-unstyled row d-lg-none gy-4 align-items-center">
+									{navigations.map((item, i) => {
+										return (
+											<li className="col-4 text-white f18 pointer" key={i}>
 												{item.link}
 											</li>
 										);

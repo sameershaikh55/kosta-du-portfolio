@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import logo from "../../assets/images/logo.svg";
 import hamburger from "../../assets/images/hamburger.svg";
+import cross from "../../assets/images/cross.svg";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ ClickEvent, isOpen }) => {
 	useEffect(() => {
 		window.addEventListener("scroll", function () {
 			var header = document.querySelector(".header_container");
@@ -21,13 +23,17 @@ const Header = () => {
 						<div className="col-11 col-md-12 mx-auto">
 							<div className="d-flex justify-content-between align-items-center">
 								<div className="logo_container">
-									<img src={logo} alt="" />
+									<Link to="/">
+										<img src={logo} alt="" />
+									</Link>
 								</div>
 
 								<div className="d-flex align-items-center">
-									<p className="mb-0 fw600">Get to know me</p>
+									<p className="mb-0 fw600 pe-3 pe-md-4">Get to know me</p>
 									<div className="burger_ pointer">
-										<img className="ms-4" src={hamburger} alt="" />
+										{(isOpen && (
+											<img onClick={ClickEvent} src={cross} alt="" />
+										)) || <img onClick={ClickEvent} src={hamburger} alt="" />}
 									</div>
 								</div>
 							</div>

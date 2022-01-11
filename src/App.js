@@ -11,10 +11,12 @@ import Contact from "./pages/Contact";
 import Press from "./pages/Press";
 import Videos from "./pages/Videos";
 import Projects from "./pages/Projects";
+// import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
 	return (
 		<BrowserRouter>
+			{/* <ScrollToTop /> */}
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/contact" element={<Contact />} />

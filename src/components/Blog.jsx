@@ -16,7 +16,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Blog = () => {
 	return (
-		<div className="blog_container">
+		<div id="blog" className="blog_container">
 			<div className="page_container">
 				<div className="container-fluid">
 					<div className="row">

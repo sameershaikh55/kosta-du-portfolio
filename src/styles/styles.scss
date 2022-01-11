@@ -25,7 +25,6 @@ html {
 	width: 100%;
 	font-size: 100%;
 	overflow-x: hidden;
-	scroll-behavior: auto !important;
 }
 @media screen and (max-width: 992px) {
 	html {
@@ -213,7 +212,7 @@ html {
 	align-items: center;
 	position: fixed;
 	transition: 0.6s;
-	z-index: 111;
+	z-index: 111111111;
 
 	p {
 		transition: 0.6s;
@@ -420,7 +419,7 @@ html {
 	position: relative;
 	height: 300px;
 
-	.col-5 {
+	.embed_inner {
 		padding: 6rem 0rem 0rem 0rem;
 	}
 
@@ -578,7 +577,7 @@ html {
 		position: absolute;
 		-webkit-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
-		background-color: #2c4c9cf3;
+		background-color: #393c43;
 		-webkit-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
 		-webkit-transition: 0.5s;
@@ -599,3 +598,177 @@ html {
 	}
 }
 // INITIATIVES END
+
+/* ==================== SideBAR STYLING END ======================== */
+.SideBarContainer {
+	position: fixed;
+	right: 0%;
+	left: 0%;
+	bottom: 0%;
+	color: white;
+	font-size: 2.2rem;
+	background: $color3;
+	height: 600px;
+	z-index: 11111;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 5rem;
+
+	.logo {
+		position: absolute;
+		top: 1%;
+		left: 3%;
+
+		img {
+			width: 120px;
+		}
+	}
+}
+
+.SideBarContainer ul li {
+	a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: 500;
+	}
+}
+
+.CrossBTn {
+	position: absolute;
+	top: 7%;
+	right: 6.5%;
+	cursor: pointer;
+	height: 25px;
+}
+/* ==================== SideBAR STYLING END ======================== */
+
+/* ==================== MEDIA START ======================== */
+@media screen and (max-width: 992px) {
+	.hero_container {
+		img.hero_img {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.header_container .logo_container {
+		transition: 0.6s;
+		width: 75px;
+	}
+	.header_container .burger_ {
+		transition: 0.6s;
+		width: 45px;
+	}
+	.header_container {
+		height: 110px;
+	}
+	.header_below {
+		height: 150px;
+	}
+	.hero_container .socials {
+		margin-top: 4rem;
+	}
+	.future_thinking_container {
+		padding: 3rem 0rem;
+	}
+	.future_thinking_container p {
+		line-height: 20px;
+		letter-spacing: 0.02em;
+	}
+	.future_thinking_container h1 {
+		letter-spacing: 0.03em;
+		line-height: 40px;
+	}
+	.featured_projects_container .body {
+		img {
+			height: 500px;
+			object-fit: cover;
+			object-position: left;
+		}
+	}
+	.featured_projects_container .projects_cta_container {
+		position: absolute;
+		left: 1rem;
+		bottom: 1rem;
+		right: 1rem;
+		background-color: rgba(255, 255, 255, 0.85);
+		max-width: 400px;
+		border-radius: 20px;
+		padding: 2rem 1.5rem;
+	}
+	.header_container.sticky {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 90px;
+	}
+	.header_container.sticky .logo_container {
+		transition: 0.6s;
+		width: 65px;
+	}
+	.header_container.sticky .burger_ {
+		transition: 0.6s;
+		width: 42px;
+	}
+	.cta_container h1 {
+		line-height: 40px;
+	}
+	.let_space {
+		letter-spacing: 0.1em;
+	}
+	.cta_container::before {
+		content: "";
+		background: #9db0cb;
+		background-position: bottom;
+		border-radius: 250px 0px px 0px 0px;
+		position: absolute;
+		margin-top: 3rem;
+		height: 93.2%;
+		width: 100%;
+		z-index: -1;
+	}
+	.projects_container,
+	.videos_container,
+	.contact_form_container {
+		padding-top: 0rem;
+	}
+	.projects_container .project_body .single_project .max_project img {
+		margin-top: 1rem;
+	}
+	.projects_container .project_body .single_project .project_card {
+		position: absolute;
+		top: 80%;
+		right: 1rem;
+		left: 1rem;
+	}
+	.projects_container .project_body .single_project2 .project_card {
+		position: absolute;
+		top: 80%;
+		right: 1rem;
+		left: 1rem;
+	}
+	.projects_container .project_body .single_project2 {
+		margin-top: 14rem;
+		position: relative;
+	}
+	.past_initatives_container {
+		margin-top: 20rem;
+	}
+	.embed_calender_container .embed_calender {
+		left: 50%;
+		max-width: 350px;
+		transform: translateX(-50%);
+	}
+	.embed_calender_container {
+		margin-bottom: 24rem;
+	}
+}
+
+@media screen and (max-width: 575px) {
+}

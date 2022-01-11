@@ -233,7 +233,7 @@ const PastInitiatives = () => {
 						<div className="row gy-4 mt-4">
 							{initiativeOne.map((prev, i) => {
 								return (
-									<div key={i} className="col-4">
+									<div key={i} className="col-12 col-sm-6 col-lg-4">
 										<InitiativeCard picture={prev.picture} decs={prev.desc} />
 									</div>
 								);
@@ -249,7 +249,7 @@ const PastInitiatives = () => {
 						<div className="row gy-4">
 							{initiativeTwo.map((prev, i) => {
 								return (
-									<div key={i} className="col-4">
+									<div key={i} className="col-12 col-sm-6 col-lg-4">
 										<InitiativeCard picture={prev.picture} decs={prev.desc} />
 									</div>
 								);

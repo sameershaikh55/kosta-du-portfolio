@@ -8,11 +8,11 @@ const Cta = () => {
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-11 col-md-12 mx-auto">
-							<div className="row align-items-center">
-								<div className="col-6">
+							<div className="row gy-5 align-items-center">
+								<div className="col-12 col-md-6">
 									<img className="w-100" src={cta} alt="" />
 								</div>
-								<div className="col-6">
+								<div className="col-12 col-md-6 pb-5 pb-md-0">
 									<h1 className="f40 let_space text-white">
 										Let’s talk. I’ll teach you how to launch your own business!
 									</h1>

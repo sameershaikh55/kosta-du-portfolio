@@ -7,13 +7,13 @@ const FutureThinking = () => {
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-11 col-md-12 mx-auto">
-							<div className="row align-items-center">
-								<div className="col-6">
+							<div className="row align-items-center gy-5">
+								<div className="col-12 col-md-6">
 									<h1 className="mb-0 fw600 f40">
 										I build future <br /> thinking businesses
 									</h1>
 								</div>
-								<div className="col-6">
+								<div className="col-12 col-md-6">
 									<p className="mb-4 fw-light">
 										I am a results-driven leader and an inspirational
 										changemaker. My vision is to transform the fintech industry

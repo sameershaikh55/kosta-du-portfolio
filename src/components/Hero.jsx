@@ -12,7 +12,7 @@ const Hero = () => {
 					<div className="row">
 						<div className="col-11 col-md-12 mx-auto">
 							<div className="row align-items-center">
-								<div className="col-6">
+								<div className="col-12 col-md-6">
 									<h1 className="color2 fw900 f58">Kosta Du</h1>
 									<h1 className="fw-light">
 										Fintech leader, speaker & entrepreneur.
@@ -33,13 +33,15 @@ const Hero = () => {
 										</ul>
 									</div>
 								</div>
-								<div className="col-6">
-									<img src={hero} alt="" />
+								<div className="d-none d-md-block col-12 col-md-6">
+									<img className="hero_img" src={hero} alt="" />
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
+				<img className="d-block d-md-none w-100 mt-5" src={hero} alt="" />
 			</div>
 		</div>
 	);

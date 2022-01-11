@@ -6,7 +6,7 @@ const PressCard = () => {
 	return (
 		<div className="press_card p-4">
 			<img src={fontechLogo} alt="" />
-			<h2 className="my-5 montserrat fw700">Paymob Tech on Fintech Scotland</h2>
+			<h3 className="my-5 montserrat fw700">Paymob Tech on Fintech Scotland</h3>
 			<div className="d-flex align-items-center">
 				<p className="mb-0">LEARN MORE</p>
 				<img className="ms-4" src={arrow} alt="" />

@@ -13,7 +13,7 @@ const ProjectHero = () => {
 							<div className="row">
 								<div className="col-12 col-md-10 col-sm-8 col-lg-6">
 									<h1 className="f58 fw900 color2">Projects</h1>
-									<p className="f18 mt-5">
+									<p className="f18 mt-4 mt-md-5">
 										Lorem ipsum dolor sit amet consectetur adipiscing elit
 									</p>
 								</div>
