@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FutureThinking = () => {
 	return (
@@ -23,9 +24,11 @@ const FutureThinking = () => {
 										project management and execution worldwide.
 									</p>
 
-									<button className="text-uppercase bg_color3 text-white border-0 px-5 py-2 rounded-pill">
-										read more
-									</button>
+									<Link to="/videos">
+										<button className="text-uppercase bg_color3 text-white border-0 px-5 py-2 rounded-pill">
+											read more
+										</button>
+									</Link>
 								</div>
 							</div>
 						</div>

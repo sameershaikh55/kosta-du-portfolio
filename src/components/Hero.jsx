@@ -22,17 +22,29 @@ const Hero = () => {
 										<div className="line_ mx-4"></div>
 										<ul className="list-unstyled d-flex align-items-center mb-0">
 											<li>
-												<a href="">
+												<a
+													target="_blank"
+													href="https://www.youtube.com/c/KostaDu"
+													rel="noreferrer"
+												>
 													<img src={youtube} alt="" />
 												</a>
 											</li>
 											<li className="mx-3">
-												<a href="">
+												<a
+													target="_blank"
+													href="https://www.linkedin.com/in/kostadu/"
+													rel="noreferrer"
+												>
 													<img src={linkdin} alt="" />
 												</a>
 											</li>
 											<li>
-												<a href="">
+												<a
+													target="_blank"
+													href="https://t.me/KostaDu"
+													rel="noreferrer"
+												>
 													<img src={telegram} alt="" />
 												</a>
 											</li>

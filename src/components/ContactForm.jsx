@@ -30,54 +30,65 @@ const ContactForm = () => {
 										</div>
 										<div className="d-flex align-items-center mt-5">
 											<img src={message} alt="" />
-											<p className="mb-0 ms-3 fw-light f18">
+											<a
+												href="mailto:kosta@paymobpos.com"
+												className="mb-0 ms-3 fw-light f18 text-black text-decoration-none"
+											>
 												kosta@paymobpos.com
-											</p>
+											</a>
 										</div>
 										<div className="col-12 d-flex align-items-center mt-5">
-											<img src={telegram} alt="" />
-											<img className="mx-3" src={youtube} alt="" />
-											<img src={linkdin} alt="" />
+											<a target="_blank" href="https://t.me/KostaDu">
+												<img src={telegram} alt="" />
+											</a>
+											<a
+												target="_blank"
+												href="https://www.youtube.com/c/KostaDu"
+											>
+												<img className="mx-3" src={youtube} alt="" />
+											</a>
+											<a
+												target="_blank"
+												href="https://www.linkedin.com/in/kostadu/"
+											>
+												<img src={linkdin} alt="" />
+											</a>
 										</div>
 									</div>
 								</div>
 								<div className="col-12 col-md-6">
 									<form
-										action="
-                  "
 										className="row gy-4"
+										action="https://formspree.io/f/moqywvbg"
+										method="POST"
 									>
 										<div className="col-12">
 											<input
 												className="w-100 py-2 px-2"
 												type="text"
-												name=""
-												id=""
 												placeholder="Name*"
+												name="name"
 											/>
 										</div>
 										<div className="col-12">
 											<input
 												className="w-100 py-2 px-2"
 												type="text"
-												name=""
-												id=""
 												placeholder="Email*"
+												name="_replyto"
 											/>
 										</div>
 										<div className="col-12">
 											<input
 												className="w-100 py-2 px-2"
 												type="text"
-												name=""
-												id=""
 												placeholder="Phone"
+												name="phone"
 											/>
 										</div>
 										<div className="col-12">
 											<textarea
-												name=""
-												id=""
+												name="message"
 												className="w-100 py-2 px-2"
 												placeholder="Message"
 												rows="6"
@@ -85,7 +96,10 @@ const ContactForm = () => {
 										</div>
 
 										<div className="col-12">
-											<button className="text-uppercase bg_color2 px-5 py-2 rounded-pill text-white border-0 let_space">
+											<button
+												type="submit"
+												className="text-uppercase bg_color2 px-5 py-2 rounded-pill text-white border-0 let_space"
+											>
 												Submit
 											</button>
 										</div>

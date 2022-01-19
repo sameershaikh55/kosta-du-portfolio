@@ -342,6 +342,20 @@ html {
   padding-top: 6rem;
 }
 
+.blog_container .each_slide .img_container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background: linear-gradient(196deg, rgba(255, 255, 255, 0) 10%, black 75%);
+}
+
 .blog_container .swiper_container {
   position: relative;
 }
@@ -367,6 +381,13 @@ html {
 .blog_container .arrow_btns button:not(:disabled) {
   background: #000 !important;
   color: #fff !important;
+}
+
+.blog_container .mySwiper .slider_ img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 300px;
+  min-height: 300px;
 }
 
 .blog_container .mySwiper .slider_ .position-absolute {
@@ -458,7 +479,7 @@ html {
 
 .embed_calender_container {
   margin-top: 7rem;
-  margin-bottom: 12rem;
+  margin-bottom: 16rem;
   position: relative;
   height: 300px;
 }
@@ -496,6 +517,11 @@ html {
           align-items: center;
 }
 
+.embed_calender_container .embed_calender iframe {
+  min-height: 400px;
+  width: 100%;
+}
+
 .press_body_container {
   margin-top: 6rem;
 }
@@ -509,6 +535,8 @@ html {
   -webkit-box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
+  height: 100%;
+  min-height: 1px;
 }
 
 .press_body_container .press_card h2 {
@@ -909,6 +937,24 @@ html {
     background-color: white;
     top: 0%;
     left: 0%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .blog_container .mySwiper .slider_ img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+    max-height: 300px;
+    min-height: 275px;
+    background: black;
+  }
+  .embed_calender_container .embed_calender iframe {
+    min-height: 415px;
+  }
+  .embed_calender_container {
+    margin-bottom: 30rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

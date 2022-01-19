@@ -15,7 +15,7 @@ const EmbedCalender = () => {
 								</div>
 								<div className="col-12 col-md-5 embed_inner">
 									<div className="embed_calender border">
-										<h2 className="text-center">embed calendar</h2>
+										<iframe src="https://meetings.kostadu.com?view=compact"></iframe>
 									</div>
 								</div>
 							</div>

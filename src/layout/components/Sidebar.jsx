@@ -4,7 +4,7 @@ import { Link as Links } from "react-scroll";
 
 const Sidebar = ({ isOpen, ClickEvent }) => {
 	let location = useLocation().pathname;
-	console.log(location);
+
 	const navigationsOne = [
 		{
 			text: "Biography",
@@ -50,10 +50,7 @@ const Sidebar = ({ isOpen, ClickEvent }) => {
 							<ul className="list-unstyled">
 								{navigationsOne.map((item, i) => {
 									return (
-										<li
-											className="row text-white f28 pointer mb-4"
-											key={i}
-										>
+										<li className="row text-white f28 pointer mb-4" key={i}>
 											<div
 												className={`${
 													location === item.link && "text-dark"
@@ -110,10 +107,7 @@ const Sidebar = ({ isOpen, ClickEvent }) => {
 							<ul className="list-unstyled">
 								{navigationsTwo.map((item, i) => {
 									return (
-										<li
-											className="row text-white f28 pointer mb-4"
-											key={i}
-										>
+										<li className="row text-white f28 pointer mb-4" key={i}>
 											<div
 												className={`${
 													location === item.link && "text-dark"

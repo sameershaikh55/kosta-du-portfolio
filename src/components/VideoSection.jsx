@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import videoPlc from "../assets/images/videoPlc.svg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Swiper, SwiperSlide } from "swiper/react";
+import getYouTubeVideos from "../services/youtube";
+import YoutubeVideoCard from "./cards/YoutubeVideoCard";
 
 // swiper bundle styles
 import "swiper/swiper-bundle.min.css";
@@ -16,8 +18,18 @@ import SwiperCore, { Navigation } from "swiper";
 SwiperCore.use([Navigation]);
 
 const VideoSection = () => {
+	const [youtubeData, setYoutubeData] = useState([]);
+
+	useEffect(() => {
+		getYouTubeVideos().then((res) => setYoutubeData(res.items));
+	}, []);
+
 	const navigationPrevRef = React.useRef(null);
 	const navigationNextRef = React.useRef(null);
+
+	if (!youtubeData.length) {
+		return "";
+	}
 
 	return (
 		<div className="videos_container">
@@ -88,23 +100,14 @@ const VideoSection = () => {
 											}}
 											className="mySwiper"
 										>
-											{[1, 1, 1, 1, 1, 1].map((item, i) => {
-												return (
-													<SwiperSlide key={i}>
-														<div className="slider_">
-															<img className="w-100" src={videoPlc} alt="" />
-
-															<div className="w-75 mx-auto text-center f18 mt-2">
-																Web Summit 2021 | What To Do At The Physical
-																Event (Part 2)
-															</div>
-															<p className="text-uppercase f14 text-center color2">
-																1 week ago
-															</p>
-														</div>
-													</SwiperSlide>
-												);
-											})}
+											{youtubeData.length &&
+												youtubeData.map((item, i) => {
+													return (
+														<SwiperSlide key={i}>
+															<YoutubeVideoCard item={item} />
+														</SwiperSlide>
+													);
+												})}
 										</Swiper>
 									</div>
 								</div>

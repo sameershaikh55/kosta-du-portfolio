@@ -1,5 +1,4 @@
-import React from "react";
-import blogPlaceholder from "../assets/images/blogPlaceholder.svg";
+import React, { useEffect, useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -11,13 +10,25 @@ import "swiper/swiper.min.css";
 
 // import Swiper core and required modules
 import SwiperCore, { Navigation } from "swiper";
+import { getMediumPosts } from "../services/medium";
+import BlogCard from "./cards/BlogCard";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
 
 const Blog = () => {
+	const [blogs, setBlogs] = useState([]);
+
+	useEffect(() => {
+		getMediumPosts().then((res) => setBlogs(res.items));
+	}, []);
+
 	const navigationPrevRef = React.useRef(null);
 	const navigationNextRef = React.useRef(null);
+
+	if (!blogs.length) {
+		return "";
+	}
 
 	return (
 		<div id="blog" className="blog_container">
@@ -36,9 +47,11 @@ const Blog = () => {
 											<IoIosArrowForward fontSize={22} />
 										</button>
 									</div>
-									<button className="text-uppercase bg_color3 text-white border-0 px-5 py-2 rounded-pill">
-										read more
-									</button>
+									<a target="blank" href="https://kostadu.medium.com/">
+										<button className="text-uppercase bg_color3 text-white border-0 px-5 py-2 rounded-pill">
+											read more
+										</button>
+									</a>
 								</div>
 							</div>
 
@@ -70,37 +83,16 @@ const Blog = () => {
 											},
 											// when window width is >= 640px
 											992: {
-												slidesPerView: 3,
+												slidesPerView: 2,
 											},
 											// when window width is >= 768px
 										}}
 										className="mySwiper"
 									>
-										{[1, 1, 1, 1, 1, 1].map((item, i) => {
+										{blogs.map((item, i) => {
 											return (
 												<SwiperSlide key={i}>
-													<div className="position-relative slider_">
-														<img
-															className="w-100"
-															src={blogPlaceholder}
-															alt=""
-														/>
-
-														<div className="position-absolute d-flex w-100 justify-content-around">
-															<div className="d-flex flex-column text-white">
-																<p className="f18 mb-0">Lorem ipsum dolor </p>
-																<p className="f14 fw-light mb-0">Category</p>
-															</div>
-															<div>
-																<button className="ms-3">
-																	<IoIosArrowForward
-																		fontSize={22}
-																		color="#3359CF"
-																	/>
-																</button>
-															</div>
-														</div>
-													</div>
+													<BlogCard item={item} />
 												</SwiperSlide>
 											);
 										})}

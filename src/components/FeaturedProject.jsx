@@ -25,9 +25,12 @@ const FeaturedProject = () => {
 										Transparent auction marketplace for financial services to
 										access emerging markets
 									</p>
-									<button className="bg_color2 text-white px-4 border-0 rounded-pill py-2 px-5 text-uppercase fw-light">
-										Website
-									</button>
+
+									<a target="blank" href="https://paymobtech.com/">
+										<button className="bg_color2 text-white px-4 border-0 rounded-pill py-2 px-5 text-uppercase fw-light">
+											Website
+										</button>
+									</a>
 								</div>
 							</div>
 						</div>

@@ -4,15 +4,16 @@ import youtube from "../../assets/images/socials/youtube.svg";
 import telegram from "../../assets/images/socials/telegram.svg";
 import linkdin from "../../assets/images/socials/linkdin.svg";
 import { Link } from "react-router-dom";
+import { Link as Links } from "react-scroll";
 
 const Footer = () => {
 	const navigations = [
-		{ link: "Bio" },
-		{ link: "Projects" },
-		{ link: "Blog" },
-		{ link: "Press" },
-		{ link: "Videos" },
-		{ link: "Contact" },
+		{ text: "Bio", link: "/" },
+		{ text: "Projects", link: "/projects" },
+		{ text: "Blog", link: "blog" },
+		{ text: "Press", link: "/press" },
+		{ text: "Videos", link: "/videos" },
+		{ text: "Contact", link: "/contact" },
 	];
 
 	return (
@@ -32,7 +33,25 @@ const Footer = () => {
 									{navigations.map((item, i) => {
 										return (
 											<li className="mx-4 text-white f18 pointer" key={i}>
-												{item.link}
+												{(item.text !== "Blog" && (
+													<Link
+														to={item.link}
+														className={`text-white text-decoration-none`}
+													>
+														{item.text}
+													</Link>
+												)) || (
+													<Links
+														to={item.link}
+														smooth={true}
+														duration={600}
+														spy={true}
+														offset={-50}
+														className="text-white text-decoration-none"
+													>
+														{item.text}
+													</Links>
+												)}
 											</li>
 										);
 									})}
@@ -50,17 +69,20 @@ const Footer = () => {
 
 								<ul className="list-unstyled d-flex align-items-center mb-0">
 									<li>
-										<a target="blank" href="https://www.youtube.com/">
+										<a target="blank" href="https://www.youtube.com/c/KostaDu">
 											<img className="pointer" src={youtube} alt="" />
 										</a>
 									</li>
 									<li className="mx-2">
-										<a target="blank" href="https://www.linkedin.com/">
+										<a
+											target="blank"
+											href="https://www.linkedin.com/in/kostadu/"
+										>
 											<img className="pointer" src={linkdin} alt="" />
 										</a>
 									</li>
 									<li>
-										<a target="blank" href="https://web.telegram.org/">
+										<a target="blank" href="https://t.me/KostaDu">
 											<img className="pointer" src={telegram} alt="" />
 										</a>
 									</li>
