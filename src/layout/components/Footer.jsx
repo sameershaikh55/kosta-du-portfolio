@@ -61,7 +61,7 @@ const Footer = () => {
 									{navigations.map((item, i) => {
 										return (
 											<li className="col-4 text-white f18 pointer" key={i}>
-												{item.link}
+												{item.text}
 											</li>
 										);
 									})}
