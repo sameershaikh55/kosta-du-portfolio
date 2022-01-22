@@ -4,7 +4,9 @@ import PressCard from "./cards/PressCard";
 
 const PressBody = () => {
 	const [loadMore, setLoadMore] = useState(9);
-
+	console.log(loadMore);
+	console.log(press.length);
+	console.log(loadMore > press.length);
 	return (
 		<div className="press_body_container">
 			<div className="page_container">
@@ -21,14 +23,16 @@ const PressBody = () => {
 								})}
 							</div>
 
-							<div className="btn_cont d-flex justify-content-center">
-								<button
-									onClick={() => setLoadMore(loadMore + loadMore)}
-									className=" text-uppercase bg_color3 text-white border-0 px-5 py-2 rounded-pill"
-								>
-									read more
-								</button>
-							</div>
+							{(loadMore > press.length && <div></div>) || (
+								<div className="btn_cont d-flex justify-content-center">
+									<button
+										onClick={() => setLoadMore(loadMore + loadMore)}
+										className=" text-uppercase bg_color3 text-white border-0 px-5 py-2 rounded-pill"
+									>
+										read more
+									</button>
+								</div>
+							)}
 						</div>
 					</div>
 				</div>
